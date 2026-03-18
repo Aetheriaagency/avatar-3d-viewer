@@ -1,61 +1,190 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Avatar 3D — AetherIA Agency</title>
-  <script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 100%; height: 100%; background: #070b12; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow: hidden; }
-    #app { width: 100vw; height: 100vh; position: relative; }
-    model-viewer { width: 100%; height: 100%; background-color: #070b12; --poster-color: #070b12; }
-    model-viewer::part(default-progress-bar) { display: none; }
-    model-viewer::part(default-ar-button) { display: none; }
-    .topbar { position: absolute; top: 0; left: 0; right: 0; z-index: 20; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; background: linear-gradient(to bottom, rgba(7,11,18,.97), transparent); pointer-events: none; }
-    .brand { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: #4A90D9; }
-    .title <{! DfOoCnTtY-PsEi zhet:m l1>4
-             p<xh;t mflo nlta-nwge=i"gehst":> 
-             6<0h0e;a dc>o
-             l<omre:t a# fcfhfa;r s}e
-    t.=h"iUnTtF -{8 "f>o
-    n<tm-estiaz en:a m1e1=p"xv;i ecwoploorrt:"  #c3o3n4t;e n}t
-    =."twaibdst h{= dpeovsiictei-owni:d tahb,sionliuttiea;l -tsocpa:l e6=21p"x>;
-     <lteifttl:e >5A0v%a;t atrr a3nDs f— oAremt:h etrrIaAn sAlgaetnecXy(<-/5t0i%t)l;e >d
-    i<sspclraiyp:t  ftlyepxe;= "gmaopd:u l8ep"x ;s rzc-=i"nhdtetxp:s :2/0/;u n}p
-    k.gt.acbo m{/ @pgaododgilneg/:m o7dpexl -1v8ipexw;e rb@o3r.d5e.r0-/rdaidsitu/sm:o d2e0lp-xv;i ebwoerrd.emri:n .1j.s5"p>x< /ssoclriidp t#>1
-                a<2s5t3y5l;e >b
-                a*c k{g rboouxn-ds:i zrignbga:( 7b,o1r1d,e1r8-,b.o9x);;  mcaorlgoirn::  #04;4 5p;a dfdoinntg-:s i0z;e :} 
-                1h2tpmxl;,  fboondty- w{e iwgihdtt:h :6 0100;0 %c;u rhseoirg:h tp:o i1n0t0e%r;;  btarcakngsriotuinodn::  #a0l7l0 b.1128;s ;f ownhti-tfea-msiplayc:e :- anpopwlrea-ps;y s}t
-    e.mt,a bB:lhionvkeMra c{S ybsotredmeFro-ncto,l o'rS:e g#o4eA 9U0ID'9,;  scaonlso-rs:e r#i4fA;9 0oDv9e;r f}l
-    o.wt:a bh.iadcdteinv;e  }{
-       #baoprpd e{r -wciodltohr::  1#040Av9w0;D 9h;e icgohlto:r :1 0#0fvfhf;;  pboasciktgiroonu:n dr:e lragtbiav(e7;4 ,}1
-                                                                                                                 4m4o,d2e1l7-,v.i1e8w)e;r  }{
-          .wbiodtttho:m b1a0r0 %{;  phoesiigthito:n :1 0a0b%s;o lbuatcek;g rbooutntdo-mc:o l0o;r :l e#f0t7:0 b01;2 ;r i-g-hpto:s t0e;r -zc-oilnodre:x :# 02700;b 1p2a;d d}i
-         nmgo:d e1l6-pvxi e2w4eprx:;: pdairstp(ldaeyf:a ufllte-xp;r oaglriegsns--ibtaerm)s :{  cdeinstpelra;y :j unsotnief;y -}c
-                                                                                             omnotdeenlt-:v isepwaecre:-:bpeatrwte(edne;f afulletx--awrr-abpu:t tworna)p ;{  gdaips:p l1a0yp:x ;n obnaec;k g}r
-                                                                                             o.utnodp:b alri n{e apro-sgirtaidoine:n ta(btsoo ltuotpe,;  rtgobpa:( 70,;1 1l,e1f8t,:. 907;) ,r itgrhatn:s p0a;r ezn-ti)n;d e}x
-                                                                                             :. a2v0-;n apmaed d{i nfgo:n t1-6spixz e2:4 p1x9;p xd;i sfpolnaty-:w efilgehxt;:  a7l0i0g;n -ciotleomrs::  #cfefnft;e r};
-                                                                                              .jauvs-tdiefsyc- c{o nftoenntt-:s iszpea:c e1-1bpext;w eceonl;o rb:a c#k3g3r4o;u nmda:r gliinn-etaorp-:g r3apdxi;e n}t
-                                                                                             (.tbot nb-octotnofmi,r mr g{b ap(a7d,d1i1n,g1:8 ,1.19p7x) ,2 8tprxa;n sbpaacrkegnrto)u;n dp:o i#n2tEe5rE-AeAv;e nctosl:o rn:o n#ef;f f};
-                                                                                              .bborradnedr :{  nfoonnet;- sbiozred:e r1-1rpaxd;i ufso:n t8-pwxe;i gfhotn:t -7s0i0z;e :l e1t4tpexr;- sfpoancti-nwge:i g2h.t5:p x7;0 0c;o lcourr:s o#r4:A 9p0oDi9n;t e}r
-                                                                                             ;. t}i
-         t.lbet n{- cfoonnfti-rsmi:zheo:v e1r4 p{x ;b afcokngtr-owuenidg:h t#:4 A69000D;9 ;c o}l
-                  o.rs:t a#gfef-fr;i n}g
-          .{h ipnots i{t ifoonn:t -asbiszoel:u t1e1;p xb;o tctoolmo:r :7 4#p3x3;4 ;l e}f
-            t.:t a5b0s% ;{  tproasnistfioornm::  atbrsaonlsultaet;e Xt(o-p5:0 %6)2;p xw;i dltehf:t :3 0500p%x;;  threaingshfto:r m1:8 ptxr;a nbsolradteerX-(r-a5d0i%u)s;:  d5i0s%p;l abyo:r dfelre:x ;2 pgxa ps:o l8ipdx ;r gzb-ai(n7d4e,x1:4 42,02;1 7},
-            ..4t5a)b;  {p opiandtdeirn-ge:v e7nptxs :1 8npoxn;e ;b ozr-dienrd-erxa:d i5u;s :a n2i0mpaxt;i obno:r dpeurl:s e1 .35sp xe assoel-iidn -#o1uat2 5i3n5f;i nbiatcek;g r}
-            @keyframes pulse { 0%,100% { box-shadow: 0 0 22px rgba(74,144,217,.3); } 50% { box-shadow: 0 0 35px rgba(74,144,217,.55); } }
-            .ld { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #070b12; z-index: 30; transition: opacity .5s; }
-            .ld-ring { width: 56px; height: 56px; border: 3px solid #1a2535; border-top-color: #4A90D9; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
-            .ld-txt { font-size: 11px; color: #4A90D9; font-weight: 700; letter-spacing: 2px; }
-            .ld-sub { font-size: 12px; color: #334; margin-top: 6px; }
-            @keyframes spin { to { transform: rotate(360deg); } }
-            </style>
-  </head>
-  <body>
-    <div id="app">
-      <model-viewer id="mv" camera-controls auto-rotate auto-rotate-delay="600" rotation-per-second="22deg" environment-image="neutral" shadow-intensity="1.8" shadow-softness="0.85" exposure="1.15" camera-orbit="0deg 80deg 5m" min-camera-orbit="auto auto 1.5m" max-c
-  </body>
-  </style></title>
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Avatar 3D — AetherIA Agency</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; background: #070b12; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; overflow: hidden; }
+#app { width: 100vw; height: 100vh; position: relative; }
+
+model-viewer {
+  width: 100%; height: 100%;
+  background-color: #070b12;
+  --poster-color: #070b12;
+}
+model-viewer::part(default-progress-bar) { display: none; }
+model-viewer::part(default-ar-button) { display: none; }
+
+.topbar {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 20;
+  padding: 16px 24px; display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(to bottom, rgba(7,11,18,.97), transparent);
+  pointer-events: none;
+}
+.brand { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; color: #4A90D9; }
+.title { font-size: 14px; font-weight: 600; color: #fff; }
+.hint { font-size: 11px; color: #334; }
+
+.tabs {
+  position: absolute; top: 62px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px; z-index: 20;
+}
+.tab {
+  padding: 7px 18px; border-radius: 20px;
+  border: 1.5px solid #1a2535; background: rgba(7,11,18,.9);
+  color: #445; font-size: 12px; font-weight: 600;
+  cursor: pointer; transition: all .18s; white-space: nowrap;
+}
+.tab:hover { border-color: #4A90D9; color: #4A90D9; }
+.tab.active {
+  border-color: #4A90D9; color: #fff;
+  background: rgba(74,144,217,.18);
+  box-shadow: 0 0 14px rgba(74,144,217,.2);
+}
+
+.bottombar {
+  position: absolute; bottom: 0; left: 0; right: 0; z-index: 20;
+  padding: 16px 24px; display: flex; align-items: center;
+  justify-content: space-between; flex-wrap: wrap; gap: 10px;
+  background: linear-gradient(to top, rgba(7,11,18,.97), transparent);
+}
+.av-name { font-size: 19px; font-weight: 700; color: #fff; }
+.av-desc { font-size: 11px; color: #334; margin-top: 3px; }
+.btn-confirm {
+  padding: 11px 28px; background: #2E5EAA; color: #fff;
+  border: none; border-radius: 8px; font-size: 14px; font-weight: 700;
+  cursor: pointer; transition: background .15s;
+}
+.btn-confirm:hover { background: #4A90D9; }
+
+.stage-ring {
+  position: absolute; bottom: 74px; left: 50%; transform: translateX(-50%);
+  width: 300px; height: 18px; border-radius: 50%;
+  border: 2px solid rgba(74,144,217,.45);
+  box-shadow: 0 0 22px rgba(74,144,217,.3), 0 0 44px rgba(74,144,217,.12);
+  pointer-events: none; z-index: 5;
+  animation: pulse 3s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { box-shadow: 0 0 22px rgba(74,144,217,.3), 0 0 44px rgba(74,144,217,.12); }
+  50%      { box-shadow: 0 0 30px rgba(74,144,217,.55), 0 0 60px rgba(74,144,217,.22); }
+}
+
+.ld {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: #070b12; z-index: 30; transition: opacity .5s;
+}
+.ld-ring {
+  width: 56px; height: 56px;
+  border: 3px solid #1a2535; border-top-color: #4A90D9;
+  border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px;
+}
+.ld-txt { font-size: 11px; color: #4A90D9; font-weight: 700; letter-spacing: 2px; }
+.ld-sub { font-size: 12px; color: #334; margin-top: 6px; }
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <model-viewer
+    id="mv"
+    camera-controls
+    auto-rotate
+    auto-rotate-delay="600"
+    rotation-per-second="22deg"
+    environment-image="neutral"
+    shadow-intensity="1.8"
+    shadow-softness="0.85"
+    exposure="1.15"
+    camera-orbit="0deg 80deg 5m"
+    min-camera-orbit="auto auto 1.5m"
+    max-camera-orbit="auto auto 9m"
+    interaction-prompt="none"
+  ></model-viewer>
+
+  <div class="stage-ring"></div>
+
+  <div class="ld" id="ld">
+    <div class="ld-ring"></div>
+    <div class="ld-txt">CARGANDO MODELO 3D</div>
+    <div class="ld-sub" id="ld-sub">SR Wolf</div>
+  </div>
+
+  <div class="topbar">
+    <span class="brand">AETHERIA AGENCY</span>
+    <span class="title">Avatar 3D — Husky Corporativo</span>
+    <span class="hint">Arrastra · Scroll · Toca</span>
+  </div>
+
+  <div class="tabs" id="tabs"></div>
+
+  <div class="bottombar">
+    <div>
+      <div class="av-name" id="av-name">SR Wolf</div>
+      <div class="av-desc" id="av-desc">Estilo dinámico con maletín · Arrastra para rotar 360°</div>
+    </div>
+    <button class="btn-confirm" onclick="confirmSel()">Seleccionar este avatar</button>
+  </div>
+</div>
+
+<script>
+const AVATARS = [
+  { name: 'SR Wolf',          desc: 'Estilo dinámico con maletín',       url: 'https://raw.githubusercontent.com/Aetheriaagency/avatar-3d-viewer/main/models/avatar1.glb' },
+  { name: 'Executive Wolf I', desc: 'Versión premium, textura detallada', url: 'https://raw.githubusercontent.com/Aetheriaagency/avatar-3d-viewer/main/models/avatar2.glb' },
+  { name: 'Executive Wolf II',desc: 'Versión limpia y corporativa',       url: 'https://raw.githubusercontent.com/Aetheriaagency/avatar-3d-viewer/main/models/avatar3.glb' },
+];
+
+let current = 0;
+const mv  = document.getElementById('mv');
+const ld  = document.getElementById('ld');
+
+// Build tabs
+const tabsEl = document.getElementById('tabs');
+AVATARS.forEach((av, i) => {
+  const btn = document.createElement('button');
+  btn.className = 'tab' + (i === 0 ? ' active' : '');
+  btn.innerHTML = '<span style="opacity:.55;margin-right:5px">' + (i+1) + '</span>' + av.name;
+  btn.onclick = () => switchTo(i);
+  tabsEl.appendChild(btn);
+});
+
+function switchTo(idx) {
+  current = idx;
+  const av = AVATARS[idx];
+
+  ld.style.opacity = '1';
+  ld.style.pointerEvents = 'all';
+  document.getElementById('ld-sub').textContent = av.name;
+  document.getElementById('av-name').textContent = av.name;
+  document.getElementById('av-desc').textContent = av.desc + ' · Arrastra para rotar 360°';
+
+  document.querySelectorAll('.tab').forEach((t, i) => {
+    t.className = 'tab' + (i === idx ? ' active' : '');
+  });
+
+  mv.src = av.url;
+}
+
+mv.addEventListener('load', () => {
+  ld.style.opacity = '0';
+  setTimeout(() => { ld.style.pointerEvents = 'none'; }, 500);
+});
+
+mv.addEventListener('error', () => {
+  ld.innerHTML = '<div class="ld-txt" style="color:#e74c3c">Error cargando modelo</div><div class="ld-sub">Comprueba tu conexión</div>';
+});
+
+function confirmSel() {
+  const name = AVATARS[current].name;
+  alert('✅ Has seleccionado: ' + name + '\n\nEl equipo de AetherIA se pondrá en contacto contigo para personalizarlo.\n\n📞 David Jiménez — +34 613 52 42 26\n✉️ info@aetheriaagency.es');
+}
+
+window.addEventListener('load', function(){ switchTo(0); });
+</script>
+</body>
+</html>
